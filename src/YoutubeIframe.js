@@ -193,8 +193,8 @@ const YoutubeIframe = (props, ref) => {
         onMessage={onWebMessage}
         source={{
           // partially allow source to be overridden
-          ...webViewProps?.source,
           method: 'GET',
+          baseUrl: 'https://youtube.com',
           html: MAIN_SCRIPT(
             videoId,
             playList,
